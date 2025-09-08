@@ -1,0 +1,13 @@
+# Production dependencies
+cached-property==2.0.1
+chevron==0.14.0
+frozendict==2.4.6
+genanki==0.13.1
+PyYAML==6.0.2
+
+# Development dependencies
+black==23.12.1
+flake8==7.0.0
+isort==5.13.2
+mypy==1.8.0
+pre-commit==3.6.0
