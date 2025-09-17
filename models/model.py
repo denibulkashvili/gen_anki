@@ -28,6 +28,7 @@ class Model:
 
     def create_basic_model(self) -> "genanki.Model":
         fields = [{"name": "Question"}, {"name": "Answer"}]
+        self.fields = fields
 
         return genanki.Model(
             1607392398,

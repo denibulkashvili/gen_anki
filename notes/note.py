@@ -15,9 +15,16 @@ class Note:
 
     def create_basic_note(self, parsed_fields: dict) -> genanki.Note:
         model = Model(ModelType.BASIC)
+        # Validate required fields
+        for field in model.fields:
+            if field["name"] not in parsed_fields:
+                raise ValueError(f"Note {self.note_id} missing {field['name']} field")
 
         question = parsed_fields["Question"]
         answer = parsed_fields["Answer"]
+
+        if not question or not answer:
+            raise ValueError(f"Note {self.note_id} is missing some content")
 
         note = genanki.Note(
             guid=self.note_id, model=model.model, fields=[question, answer]

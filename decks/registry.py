@@ -14,7 +14,7 @@ class InterviewUniversityDeck(Enum):
     DATA_STRUCTURES = "Data Structures"
     DESIGN_PATTERNS = "Design Patterns"
     INTERVIEW_PROCESS = "Interview Process"
-    NETWORKING = "Networking"
+    INFORMATION_TECHNOLOGY = "Information Technology"
     PROGRAMMING_PRINCIPLES = "Programming Principles"
     SYSTEM_DESIGN = "System Design"
 
@@ -33,8 +33,8 @@ deck_id_map = {
     InterviewUniversityDeck.DATA_STRUCTURES: 1607392322,
     InterviewUniversityDeck.DESIGN_PATTERNS: 1607392323,
     InterviewUniversityDeck.INTERVIEW_PROCESS: 1607392324,
-    InterviewUniversityDeck.NETWORKING: 1607392325,
     InterviewUniversityDeck.PROGRAMMING_PRINCIPLES: 1607392326,
+    InterviewUniversityDeck.INFORMATION_TECHNOLOGY: 1607392325,
     InterviewUniversityDeck.SYSTEM_DESIGN: 1607392327,
     TechStackDeck.CLOUD: 1607392328,
     TechStackDeck.DATABASES: 1607392329,
