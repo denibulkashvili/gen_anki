@@ -23,7 +23,6 @@ class DeckNotesFinder:
             self.flashcards.extend(flashcards_from_file)
 
         if not self._are_flashcards_valid():
-            print(f"❌ Invalid flashcards: {self.flashcards}")
             return []
 
         return self.flashcards
@@ -39,20 +38,22 @@ class DeckNotesFinder:
         return self.all_md_files
 
     def _are_flashcards_valid(self) -> bool:
+        is_valid = True
+
         if not self.flashcards or len(self.flashcards) == 0:
-            return True
+            return is_valid
 
         unique_ids = set()
 
         for flashcard in self.flashcards:
             if not flashcard["id"] or not flashcard["model"] or not flashcard["fields"]:
                 print(f"❌ Invalid flashcard properties: {flashcard}")
-                return False
+                is_valid = False
 
             if flashcard["id"] in unique_ids:
                 print(f"❌ Duplicate ID found: {flashcard['id']}")
-                return False
+                is_valid = False
 
             unique_ids.add(flashcard["id"])
 
-        return True
+        return is_valid

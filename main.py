@@ -19,7 +19,7 @@ def build_decks() -> None:
 
     for deck in deck_registry.decks:
         deck_name = f"{GLOBAL_DECK_NAME_PREFIX}::{deck['name']}"
-        deck_path = deck["path"]
+        deck_path = deck["name"]
         deck_id = deck["id"]
 
         absolute_deck_path = os.path.join(
