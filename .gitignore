@@ -184,3 +184,4 @@ Desktop.ini
 generated_decks/
 *.anki2
 *.apkg
+**/config.json

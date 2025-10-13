@@ -5,25 +5,25 @@ This script creates a deck with different types of cards
 """
 import os
 
+from config import config_loader
 from decks import Deck, DeckRegistry
 from models import ModelType
 from notes import DeckNotesFinder, Note
 
 PACKAGES_DIR = "./generated_decks"
-OBSIDIAN_VAULT_PATH = "/mnt/c/Users/legion/Documents/Obsidian Vaults/programming"
-GLOBAL_DECK_NAME_PREFIX = "SOFTWARE ENGINEERING"
 
 
 def build_decks() -> None:
+    config = config_loader.load_config()
     deck_registry = DeckRegistry()
 
     for deck in deck_registry.decks:
-        deck_name = f"{GLOBAL_DECK_NAME_PREFIX}::{deck['name']}"
+        deck_name = f"{config.global_deck_name_prefix}::{deck['name']}"
         deck_path = deck["name"]
         deck_id = deck["id"]
 
         absolute_deck_path = os.path.join(
-            OBSIDIAN_VAULT_PATH, GLOBAL_DECK_NAME_PREFIX, deck_path
+            config.vault_path, config.global_deck_name_prefix, deck_path
         )
 
         flashcards = DeckNotesFinder(absolute_deck_path).extract_flashcards()

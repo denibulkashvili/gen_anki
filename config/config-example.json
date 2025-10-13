@@ -1,0 +1,16 @@
+{
+    "settings": {
+        "OBSIDIAN_VAULT_PATH": "/mnt/c/Users/legion/Documents/Obsidian Vaults/programming",
+        "GLOBAL_DECK_NAME_PREFIX": "SOFTWARE ENGINEERING"
+    },
+    "decks": [
+        {
+            "name": "INTERVIEW UNIVERSITY",
+            "id": 1607392319
+        },
+        {
+            "name": "TECH STACK",
+            "id": 1607392320
+        }
+    ]
+}
