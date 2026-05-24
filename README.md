@@ -25,7 +25,13 @@ A Python tool that automatically generates Anki flashcard decks from markdown fi
 cd /path/to/anki_gen
 ```
 
-2. Install production dependencies:
+2. Create and activate a virtual environment:
+```bash
+python3 -m venv venv      # create venv once
+source venv/bin/activate  # activate it whenever you work
+```
+
+3. Install production dependencies:
 ```bash
 make install
 ```
